@@ -12,13 +12,17 @@ class XKCD
     #   >> XKCD.comic
     #   => "http://xkcd.com/891/"
 
-    def self.comic()
-       open('http://dynamic.xkcd.com/random/comic/').base_uri.to_s
+    def self.comic
+        open('http://dynamic.xkcd.com/random/comic/').base_uri.to_s
     end
     
+    class << XKCD
+        alias_method :get, :comic
+    end
+      
     def self.img
         url = 'http://dynamic.xkcd.com/random/comic/'
-        html = open(url).read()
+        html = open(url).read
         imgs = URI.extract(html).select{ |l| l[/comics\//]}
         imgs.first
     end

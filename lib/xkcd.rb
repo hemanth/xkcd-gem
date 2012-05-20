@@ -1,4 +1,4 @@
-#!/usr/bin/evn ruby
+#!/usr/bin/env ruby
 require 'net/http'
 require 'open-uri'
 # The main XKCD driver

@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'net/http'
+require 'hpricot'
 require 'open-uri'
 # The main XKCD driver
 class XKCD
@@ -21,9 +21,6 @@ class XKCD
     end
       
     def self.img
-        url = 'http://dynamic.xkcd.com/random/comic/'
-        html = open(url).read
-        imgs = URI.extract(html).select{ |l| l[/comics\//]}
-        imgs.first
+        Hpricot(open('http://dynamic.xkcd.com/random/comic/')).search("#comic img").first.raw_attributes["src"]
     end
 end

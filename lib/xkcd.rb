@@ -21,6 +21,9 @@ class XKCD
     end
       
     def self.img
-        Nokogiri::HTML(open('http://dynamic.xkcd.com/random/comic/')).css('#comic img')[0].attributes["src"].value
+        img = Nokogiri::HTML(open('http://dynamic.xkcd.com/random/comic/')).css('#comic img')[0]
+        img_url = img.attributes["src"].value
+        img_title = img.attributes["title"].value
+        "#{img_title} : #{img_url}"
     end
 end

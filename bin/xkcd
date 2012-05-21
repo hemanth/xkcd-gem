@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 require 'xkcd'
 puts XKCD.get
-
+puts XKCD.

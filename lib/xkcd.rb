@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'hpricot'
+require 'nokogiri'
 require 'open-uri'
 # The main XKCD driver
 class XKCD
@@ -21,6 +21,6 @@ class XKCD
     end
       
     def self.img
-        Hpricot(open('http://dynamic.xkcd.com/random/comic/')).search("#comic img").first.raw_attributes["src"]
+        Nokogiri::HTML(open('http://dynamic.xkcd.com/random/comic/')).css('#comic img')[0].attributes["src"].value
     end
 end

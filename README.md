@@ -1,1 +1,1 @@
-# Visit the site [http://hemanth.github.com/xkcd-gem](xckd-gem)
+# Visit the site [xkcd-gem](http://hemanth.github.com/xkcd-gem)

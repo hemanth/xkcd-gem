@@ -1,0 +1,1 @@
+{"name":"Xkcd-gem","body":"Just do a ```gem install xkcd```\r\n\r\nAnd then :\r\n\r\n    require 'xkcd'\r\n    p XKCD.img   # To get random comic image URL and title\r\n    p XKCD.comic # Get the random comic URL","tagline":"XCKD ruby gem to get random img url or comic urls ","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}

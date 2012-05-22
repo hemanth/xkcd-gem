@@ -34,7 +34,7 @@ class XKCD
         max = JSON.parse(open('http://xkcd.com/info.0.json').read)["num"]
         comic_num = Random.rand(max) 
         comic_num = 1 if comic_num == 404 # Avoid 404th comic ;)
-        comic = JSON.parse(open("http://xkcd.com/#{random_comic}/info.0.json").read)
+        comic = JSON.parse(open("http://xkcd.com/#{comic_num}/info.0.json").read)
         "#{comic['alt']} : #{comic['img']}"    
     end
 end

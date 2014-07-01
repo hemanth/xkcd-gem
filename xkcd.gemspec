@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.2}
   s.add_dependency('nokogiri', '>= 1.5.0')
+  s.add_dependency('google-search')
   s.summary = %q{XCKD random img urls!}
   s.bindir = 'bin'
   s.executables = 'xkcd'

@@ -42,12 +42,6 @@ class XKCD
       alias get comic
   end
 
-  #     def self.img
-  #         img = Nokogiri::HTML(open('https://dynamic.xkcd.com/random/comic/')).css('#comic img')[0]
-  #         img_url = img.attributes["src"].value
-  #         img_title = img.attributes["title"].value
-  #         "#{img_title} : #{img_url}"
-  #     end
   def self.img
     max = JSON.parse(open("https://xkcd.com/info.0.json").read)["num"]
     comic_num = 1 + rand(max - 1)
